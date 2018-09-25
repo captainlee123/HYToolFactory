@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 
+#import "HYBaseUIHeader.h"
+#import "ViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,7 +20,31 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    self.window = [[UIWindow alloc] initWithFrame:HY_APP_RECT];
+    self.window.backgroundColor = [UIColor clearColor];
+    [self.window makeKeyAndVisible];
+    
+    ViewController *rootViewController = [[ViewController alloc] init];
+    HYBaseNavigationController *navi = [[HYBaseNavigationController alloc] initWithRootViewController:rootViewController];
+    [self.window setRootViewController:navi];
+    
+    
     return YES;
+}
+
+
+- (void)configUserInteraction {
+    if (@available(iOS 11.0, *)) {
+        //解决 reloadData“乱跑”的问题
+        UITableView.appearance.estimatedRowHeight = 0;
+        UITableView.appearance.estimatedSectionFooterHeight = 0;
+        UITableView.appearance.estimatedSectionHeaderHeight = 0;
+    }
+    
+    UINavigationBar.appearance.tintColor = [UIColor whiteColor];
+    UINavigationBar.appearance.barTintColor = [UIColor whiteColor];
 }
 
 

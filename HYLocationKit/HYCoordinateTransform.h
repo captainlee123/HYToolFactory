@@ -1,0 +1,98 @@
+//
+//  HYCoordinateTransform.h
+//  TDTNJ_AGS
+//
+//  Created by Cheng Lee-iHooyah on 4/29/14.
+//  Copyright (c) 2014 ihooyah.com. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+
+@interface HYCoordinateTransform : NSObject
+
+// 是不不需要转换坐标
++ (BOOL)noNeedTransForm:(double)lat bdLon:(double)lon;
+
+//GPS 坐标转为火星坐标
++ (void)transfromWithWGLat:(double)wgLat WGLon:(double)wgLon outMGLat:(double *)mgLat outMGLon:(double *)mgLon;
+
+/**
+ *	@brief	世界标准地理坐标(WGS-84) 转换成 中国国测局地理坐标（GCJ-02）<火星坐标>
+ *
+ *  ####只在中国大陆的范围的坐标有效，以外直接返回世界标准坐标
+ *
+ *	@param 	location 	世界标准地理坐标(WGS-84)
+ *
+ *	@return	中国国测局地理坐标（GCJ-02）<火星坐标>
+ */
++ (CLLocationCoordinate2D)wgs84ToGcj02:(CLLocationCoordinate2D)location;
+
+
+/**
+ *	@brief	中国国测局地理坐标（GCJ-02） 转换成 世界标准地理坐标（WGS-84）
+ *  此接口有1-2米左右的误差，需要精确的场景慎用
+ *  ####此接口有1－2米左右的误差，需要精确定位情景慎用
+ *
+ *	@param 	location 	中国国测局地理坐标（GCJ-02）
+ *
+ *	@return	世界标准地理坐标（WGS-84）
+ */
+
++ (CLLocationCoordinate2D)gcj02ToWgs84:(CLLocationCoordinate2D)location;
+
+
+/**
+ *	@brief	世界标准地理坐标(WGS-84) 转换成 百度地理坐标（BD-09)
+ *
+ *	@param 	location 	世界标准地理坐标(WGS-84)
+ *
+ *	@return	百度地理坐标（BD-09)
+ */
++ (CLLocationCoordinate2D)wgs84ToBd09:(CLLocationCoordinate2D)location;
++ (CLLocationCoordinate2D)wgs4490ToBd09:(CLLocationCoordinate2D)location;
+
+/**
+ *	@brief	中国国测局地理坐标（GCJ-02）<火星坐标> 转换成 百度地理坐标（BD-09)
+ *
+ *	@param 	location 	中国国测局地理坐标（GCJ-02）<火星坐标>
+ *
+ *	@return	百度地理坐标（BD-09)
+ */
++ (CLLocationCoordinate2D)gcj02ToBd09:(CLLocationCoordinate2D)location;
+
+
+/**
+ *	@brief	百度地理坐标（BD-09) 转换成 中国国测局地理坐标（GCJ-02）<火星坐标>
+ *  此接口有1-2米左右的误差，需要精确的场景慎用
+ *	@param 	location 	百度地理坐标（BD-09)
+ *
+ *	@return	中国国测局地理坐标（GCJ-02）<火星坐标>
+ */
++ (CLLocationCoordinate2D)bd09ToGcj02:(CLLocationCoordinate2D)location;
+
+
+/**
+ *	@brief	百度地理坐标（BD-09) 转换成 世界标准地理坐标（WGS-84）
+ *
+ *  ####此接口有1－2米左右的误差，需要精确定位情景慎用
+ *
+ *	@param 	location 	百度地理坐标（BD-09)
+ *
+ *	@return	世界标准地理坐标（WGS-84）
+ */
++ (CLLocationCoordinate2D)bd09ToWgs84:(CLLocationCoordinate2D)location;
+
+/**
+ *	@brief	百度地理坐标（BD-09) 转换成 天地图坐标
+ *
+ *  ####此接口有1－2米左右的误差，需要精确定位情景慎用
+ *
+ *	@param 	location 	百度地理坐标（BD-09)
+ *
+ *	@return	天地图地理坐标（4490）
+ */
++ (CLLocationCoordinate2D)bd09To4490:(CLLocationCoordinate2D)location;
+
++ (CLLocationCoordinate2D)wgs84ToWgs4490:(CLLocationCoordinate2D)wgs84;
+@end

@@ -1,0 +1,421 @@
+//
+//  WKImageClipView.m
+//  WeiKePad
+//
+//  Created by xuchenyang on 14-11-12.
+//  Copyright (c) 2014年 WeiKeGroup. All rights reserved.
+//
+
+#import "WKImageClipView.h"
+#import "WKImageGridView.h"
+#import <AVFoundation/AVFoundation.h>
+#import "HYBaseUIHeader.h"
+
+@interface WKImageClipView () <UIScrollViewDelegate>
+
+@property (nonatomic, strong) UIScrollView                 *scrollView;
+
+@property (strong, nonatomic) UIImageView                  *imageView;
+
+@property (strong, nonatomic) WKImageGridView              *gridView;
+
+@property (strong, nonatomic) UIView                       *headerView;
+
+@property (assign, nonatomic) float                        imageScale;
+
+@property (assign, nonatomic) CGRect                       imageRect;
+
+
+@property (nonatomic, assign) NSInteger                    rotationNum;
+
+
+@end
+
+//颜色RGBA
+#define RGBA(r,g,b,a)                     [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+
+@implementation WKImageClipView
+
+/**
+ TODO:创建实例
+ 
+ @param image 图片
+ @param frame 大小
+ 
+ @return 实例对象
+ 
+ @author 徐晨阳
+ @since 1.0
+ */
+- (instancetype)initWithImage:(UIImage *)image frame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self){
+        self.imageScale = 1.0;
+        self.backgroundColor = RGBA(49.0f, 49.0f, 64.0f, 1.0f);
+        self.imageRect = [self calculateFrameWithImage:image suggestedSize:CGSizeMake(self.bounds.size.width*0.9, self.bounds.size.height*0.9)];
+        [self initImageView:image];
+        [self initGridView];
+        [self initHeaderView];
+        [self initFooterView];
+    }
+    return self;
+}
+
+- (void)dealloc{
+    self.delegate = nil;
+}
+
+/**
+ TODO:初始化header
+ 
+ @author 徐晨阳
+ @since 1.0
+ */
+- (void)initHeaderView{
+    self.headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, 70)];
+    self.headerView.backgroundColor = RGBA(39.0f, 39.0f, 48.0f, 1.0f);
+    [self addSubview:self.headerView];
+    
+    UIImage *cancelImage = [HYBaseUITool hy_imageNamed:@"wkboard_image_clip_cancel.png"];
+    UIImage *cancelImage_dn = [HYBaseUITool hy_imageNamed:@"wkboard_image_clip_cancel_dn.png"];
+    UIImage *confirmImage = [HYBaseUITool hy_imageNamed:@"wkboard_image_clip_confirm.png"];
+    UIImage *confirmImage_dn = [HYBaseUITool hy_imageNamed:@"wkboard_image_clip_confirm_dn.png"];
+    
+    UIButton *cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    cancelBtn.exclusiveTouch = YES;
+    cancelBtn.frame = CGRectMake(40, 25, cancelImage.size.width, cancelImage.size.height);
+    [cancelBtn setImage:cancelImage forState:UIControlStateNormal];
+    [cancelBtn setImage:cancelImage_dn forState:UIControlStateHighlighted];
+    [cancelBtn addTarget:self action:@selector(cancelAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.headerView addSubview:cancelBtn];
+    
+    UIButton *confirmBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    confirmBtn.exclusiveTouch = YES;
+    confirmBtn.frame = CGRectMake(self.frame.size.width-40-confirmImage.size.width, 25, confirmImage.size.width, confirmImage.size.height);
+    [confirmBtn setImage:confirmImage forState:UIControlStateNormal];
+    [confirmBtn setImage:confirmImage_dn forState:UIControlStateHighlighted];
+    [confirmBtn addTarget:self action:@selector(confirmAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self.headerView addSubview:confirmBtn];
+    
+    int width = 180;
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake((self.headerView.frame.size.width-width)/2, 25, width, 35)];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.backgroundColor = [UIColor clearColor];
+    titleLabel.font = [UIFont systemFontOfSize:22.0f];
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.text = @"图片裁剪";
+    [self.headerView addSubview:titleLabel];
+}
+
+- (void)initFooterView {
+    UIView *footerView = [[UIView alloc] initWithFrame:CGRectMake(0, self.bounds.size.height-50, self.bounds.size.width, 50)];
+    footerView.backgroundColor = RGBA(39.0f, 39.0f, 48.0f, 1.0f);
+    [self addSubview:footerView];
+    
+    UIImage *image = [HYBaseUITool hy_imageNamed:@"rotate"];
+    UIButton *rotateBtn = [[UIButton alloc] initWithFrame:CGRectMake((footerView.bounds.size.width-44)/2.0, 0, 50, 50)];
+    [rotateBtn addTarget:self action:@selector(rotateAction) forControlEvents:UIControlEventTouchUpInside];
+    [rotateBtn setBackgroundImage:image forState:0];
+    [footerView addSubview:rotateBtn];
+}
+
+/**
+ TODO:初始化imageView
+ 
+ @param image 图片
+ 
+ @author 徐晨阳
+ @since 1.0
+ */
+- (void)initImageView:(UIImage *)image{
+    self.scrollView = [[UIScrollView alloc] initWithFrame:self.imageRect];
+    self.scrollView.delegate = self;
+    self.scrollView.clipsToBounds = NO;
+    self.scrollView.showsHorizontalScrollIndicator = NO;
+    self.scrollView.showsVerticalScrollIndicator = NO;
+    self.scrollView.minimumZoomScale = 1.0;
+    self.scrollView.maximumZoomScale = 2.0;
+    [self addSubview:self.scrollView];
+    
+    self.imageView = [[UIImageView alloc] initWithFrame:self.scrollView.bounds];
+    self.imageView.image = image;
+    self.imageView.backgroundColor = [UIColor clearColor];
+    self.imageView.clipsToBounds = NO;
+    [self.scrollView addSubview:self.imageView];
+}
+
+- (void)handlePinch:(UIPinchGestureRecognizer *)gesture {
+    self.imageView.transform = CGAffineTransformScale(self.imageView.transform, gesture.scale, gesture.scale);
+    gesture.scale = 1.0;
+    
+    NSLog(@"%@", NSStringFromCGRect(self.imageView.frame));
+    [self.gridView setFrame:self.imageView.frame];
+}
+
+/**
+ TODO:初始化网格界面
+ 
+ @author 徐晨阳
+ @since 1.0
+ */
+- (void)initGridView{
+    self.gridView = [[WKImageGridView alloc] initWithFrame:self.imageRect];
+    self.gridView.backgroundColor = [UIColor clearColor];
+    [self addSubview:self.gridView];
+}
+
+
+#pragma mark ================== UIScrollViewDelegate =================
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    return self.imageView;
+}
+
+- (void)scrollViewDidZoom:(UIScrollView *)scrollView {
+    CGRect convertRect = [self.imageView.superview convertRect:self.imageView.frame toView:self];
+//    NSLog(@"******%@", NSStringFromCGRect(convertRect));
+    
+    [self.gridView setFrame:convertRect];
+    [self.gridView adjustMaxClipRect:convertRect];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGRect convertRect = [self.imageView.superview convertRect:self.imageView.frame toView:self];
+//    NSLog(@"++++++++%@", NSStringFromCGRect(convertRect));
+    
+    [self.gridView setFrame:convertRect];
+    [self.gridView adjustMaxClipRect:convertRect];
+}
+
+/**
+ *  @author 有点坑, 15-09-21 14:09:02
+ *
+ *  TODO:旋转图片
+ *
+ *  @since 1.0
+ */
+- (void)rotateAction {
+    self.rotationNum++;
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        self.scrollView.transform = CGAffineTransformRotate(self.scrollView.transform, M_PI_2);
+        
+        CGRect convertRect = [self.imageView.superview convertRect:self.imageView.frame toView:self];
+        [self.gridView setFrame:convertRect];
+        [self.gridView adjustMaxClipRect:convertRect];
+        [self.gridView adjustClipRect];
+        
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
+
+
+/**
+ TODO:计算区间大小
+ 
+ @param image 图片
+ @param suggestedSize 建议的区间大小
+ 
+ @author 徐晨阳
+ @since 1.0
+ */
+- (CGRect)calculateFrameWithImage:(UIImage *)image suggestedSize:(CGSize)suggestedSize {
+    CGRect rect = CGRectZero;
+    if (image.size.width / image.size.height >= suggestedSize.width / suggestedSize.height){
+        rect = CGRectMake(0, 0, suggestedSize.width, suggestedSize.width * image.size.height / image.size.width);
+        self.imageScale = suggestedSize.width / image.size.width;
+    }else {
+        rect = CGRectMake(0, 0, suggestedSize.height * image.size.width / image.size.height, suggestedSize.height);
+        self.imageScale = suggestedSize.height / image.size.height;
+    }
+    rect = CGRectMake((self.bounds.size.width-rect.size.width)/2, (self.bounds.size.height-rect.size.height)/2+30, rect.size.width, rect.size.height);
+    return rect;
+}
+
+
+- (UIImage *)getClippedImage {
+    CGRect imageRect = [self.imageView.superview convertRect:self.imageView.frame toView:self];
+    CGRect clipRect = [self.gridView convertRect:self.gridView.clipRect toView:self];
+//    NSLog(@"%@", NSStringFromCGRect(imageRect));
+//    NSLog(@"%@", NSStringFromCGRect(clipRect));
+    CGRect convertClipRect = CGRectMake(clipRect.origin.x-imageRect.origin.x, clipRect.origin.y-imageRect.origin.y, clipRect.size.width, clipRect.size.height);
+    
+    
+//    CGRect convertClipRect = [self.gridView convertRect:self.gridView.clipRect toView:self.imageView];
+    
+    //原图大小
+    CGSize size = self.imageView.image.size;
+    CGFloat ratio = MAX(imageRect.size.width, imageRect.size.height) / MAX(size.width, size.height);
+    
+    CGRect zoomedClipRect = CGRectMake(convertClipRect.origin.x / ratio,
+                                       convertClipRect.origin.y / ratio,
+                                       convertClipRect.size.width / ratio,
+                                       convertClipRect.size.height / ratio);
+    
+    UIImage *rotatedImage = [self rotateImage:self.imageView.image imageOrientation:[self currentOrientation]];
+    
+    CGImageRef croppedImage = CGImageCreateWithImageInRect(rotatedImage.CGImage, zoomedClipRect);
+    UIImage *image = [UIImage imageWithCGImage:croppedImage scale:1.0f orientation:rotatedImage.imageOrientation];
+    CGImageRelease(croppedImage);
+    
+    return image;
+}
+
+- (UIImageOrientation)currentOrientation {
+    NSInteger num = self.rotationNum % 4;
+    UIImageOrientation orientation = UIImageOrientationUp;
+    switch (num) {
+        case 0: {
+            orientation = UIImageOrientationUp;
+        }
+            break;
+        case 1: {
+            orientation = UIImageOrientationRight;
+        }
+            break;
+        case 2: {
+            orientation = UIImageOrientationDown;
+        }
+            break;
+        case 3: {
+            orientation = UIImageOrientationLeft;
+        }
+            break;
+            
+        default:
+            break;
+    }
+    
+    return orientation;
+}
+
+- (UIImage *)rotateImage:(UIImage *)aImage imageOrientation:(UIImageOrientation)orient
+
+{
+    CGImageRef imgRef = aImage.CGImage;
+    CGFloat width = CGImageGetWidth(imgRef);
+    CGFloat height = CGImageGetHeight(imgRef);
+    CGAffineTransform transform = CGAffineTransformIdentity;
+    CGRect bounds = CGRectMake(0, 0, width, height);
+    CGFloat scaleRatio = 1;
+    CGFloat boundHeight;
+    
+    switch(orient)
+    {
+        case UIImageOrientationUp: //EXIF = 1
+            transform = CGAffineTransformIdentity;
+            break;
+        case UIImageOrientationUpMirrored: //EXIF = 2
+            transform = CGAffineTransformMakeTranslation(width, 0.0);
+            transform = CGAffineTransformScale(transform, -1.0, 1.0);
+            break;
+        case UIImageOrientationDown: //EXIF = 3
+            transform = CGAffineTransformMakeTranslation(width, height);
+            transform = CGAffineTransformRotate(transform, M_PI);
+            break;
+        case UIImageOrientationDownMirrored: //EXIF = 4
+            transform = CGAffineTransformMakeTranslation(0.0, height);
+            transform = CGAffineTransformScale(transform, 1.0, -1.0);
+            break;
+        case UIImageOrientationLeftMirrored: //EXIF = 5
+            boundHeight = bounds.size.height;
+            bounds.size.height = bounds.size.width;
+            bounds.size.width = boundHeight;
+            transform = CGAffineTransformMakeTranslation(height, width);
+            transform = CGAffineTransformScale(transform, -1.0, 1.0);
+            transform = CGAffineTransformRotate(transform, 3.0 * M_PI / 2.0);
+            break;
+        case UIImageOrientationLeft: //EXIF = 6
+            boundHeight = bounds.size.height;
+            bounds.size.height = bounds.size.width;
+            bounds.size.width = boundHeight;
+            transform = CGAffineTransformMakeTranslation(0.0, width);
+            transform = CGAffineTransformRotate(transform, 3.0 * M_PI / 2.0);
+            break;
+        case UIImageOrientationRightMirrored: //EXIF = 7
+            boundHeight = bounds.size.height;
+            bounds.size.height = bounds.size.width;
+            bounds.size.width = boundHeight;
+            transform = CGAffineTransformMakeScale(-1.0, 1.0);
+            transform = CGAffineTransformRotate(transform, M_PI / 2.0);
+            break;
+        case UIImageOrientationRight: //EXIF = 8
+            boundHeight = bounds.size.height;
+            bounds.size.height = bounds.size.width;
+            bounds.size.width = boundHeight;
+            transform = CGAffineTransformMakeTranslation(height, 0.0);
+            transform = CGAffineTransformRotate(transform, M_PI / 2.0);
+            break;
+        default:
+            [NSException raise:NSInternalInconsistencyException format:@"Invalid image orientation"];
+    }
+    UIGraphicsBeginImageContext(bounds.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    if (orient == UIImageOrientationRight || orient == UIImageOrientationLeft) {
+        CGContextScaleCTM(context, -scaleRatio, scaleRatio);
+        CGContextTranslateCTM(context, -height, 0);
+    }
+    else {
+        CGContextScaleCTM(context, scaleRatio, -scaleRatio);
+        CGContextTranslateCTM(context, 0, -height);
+    }
+    CGContextConcatCTM(context, transform);
+    CGContextDrawImage(UIGraphicsGetCurrentContext(), CGRectMake(0, 0, width, height), imgRef);
+    UIImage *imageCopy = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return imageCopy;
+}
+
+- (UIImage *)rotatedImageWithImage:(UIImage *)image drawSize:(CGSize)drawSize transform:(CGAffineTransform)transform
+{
+    CGSize size = drawSize;
+    
+    UIGraphicsBeginImageContext(size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextTranslateCTM(context, size.width / 2, size.height / 2);
+    CGContextConcatCTM(context, transform);
+    CGContextTranslateCTM(context, size.width / -2, size.height / -2);
+    [image drawInRect:CGRectMake(0.0f, 0.0f, size.width, size.height)];
+    
+    UIImage *rotatedImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return rotatedImage;
+}
+
+#pragma mark =================== 按钮 =================== 
+/**
+ TODO:取消按钮事件
+ 
+ @param sender 消息对象
+ 
+ @author 徐晨阳
+ @since 1.0
+ */
+- (void)cancelAction:(id)sender{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(WKImageClipViewDidCancelClip)]){
+        [self.delegate WKImageClipViewDidCancelClip];
+    }
+}
+
+/**
+ TODO:确认按钮事件
+ 
+ @param sender 消息对象
+ 
+ @author 徐晨阳
+ @since 1.0
+ */
+- (void)confirmAction:(id)sender{
+    [self getClippedImage];
+    
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(WKImageClipViewDidConfirmClipWithImage:)]){
+        [self.delegate WKImageClipViewDidConfirmClipWithImage:[self getClippedImage]];
+    }
+}
+
+@end

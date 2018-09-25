@@ -9,12 +9,63 @@
 /* Begin PBXBuildFile section */
 		5A90F6AC214BB15000EDF944 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F6AB214BB15000EDF944 /* AppDelegate.m */; };
 		5A90F6AF214BB15000EDF944 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F6AE214BB15000EDF944 /* ViewController.m */; };
-		5A90F6B2214BB15000EDF944 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A90F6B0214BB15000EDF944 /* Main.storyboard */; };
 		5A90F6B4214BB15100EDF944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A90F6B3214BB15100EDF944 /* Assets.xcassets */; };
 		5A90F6B7214BB15100EDF944 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A90F6B5214BB15100EDF944 /* LaunchScreen.storyboard */; };
 		5A90F6BA214BB15100EDF944 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F6B9214BB15100EDF944 /* main.m */; };
 		5A90F6C4214BB15100EDF944 /* HYToolFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F6C3214BB15100EDF944 /* HYToolFactoryTests.m */; };
 		5A90F6CF214BB15200EDF944 /* HYToolFactoryUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F6CE214BB15200EDF944 /* HYToolFactoryUITests.m */; };
+		5A90F70C214BB23100EDF944 /* UIImage+HYAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F6FF214BB23100EDF944 /* UIImage+HYAddition.m */; };
+		5A90F70D214BB23100EDF944 /* NSTimer+HYAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F704214BB23100EDF944 /* NSTimer+HYAddition.m */; };
+		5A90F70F214BB23100EDF944 /* UIColor+HYAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F706214BB23100EDF944 /* UIColor+HYAddition.m */; };
+		5A90F712214BB23100EDF944 /* NSString+HYAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F70A214BB23100EDF944 /* NSString+HYAddition.m */; };
+		5A90F727214BB24800EDF944 /* HYFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F715214BB24800EDF944 /* HYFileTool.m */; };
+		5A90F72A214BB24800EDF944 /* HYAnimationTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F71F214BB24800EDF944 /* HYAnimationTool.m */; };
+		5A90F72B214BB24800EDF944 /* HYDateTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F720214BB24800EDF944 /* HYDateTool.m */; };
+		5A90F72C214BB24800EDF944 /* HYAnimationOrigamiTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F721214BB24800EDF944 /* HYAnimationOrigamiTool.m */; };
+		5A90F735214BB65500EDF944 /* HYLinkLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F732214BB65500EDF944 /* HYLinkLabel.m */; };
+		5A90F736214BB65500EDF944 /* HYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F734214BB65500EDF944 /* HYLabel.m */; };
+		5A90F739214BC41D00EDF944 /* HYCommonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F738214BC41C00EDF944 /* HYCommonTool.m */; };
+		5A90F73C214BC4C600EDF944 /* HYCountDownTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F73B214BC4C600EDF944 /* HYCountDownTool.m */; };
+		5A90F746214FAE7200EDF944 /* HYMediaTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F745214FAE7200EDF944 /* HYMediaTool.m */; };
+		5A90F74F214FBEA200EDF944 /* HYCrashReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F74E214FBEA100EDF944 /* HYCrashReport.m */; };
+		5A90F752214FBEDD00EDF944 /* HYSystemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F751214FBEDD00EDF944 /* HYSystemView.m */; };
+		5A90F757214FBF7B00EDF944 /* HYBezierCurve.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F754214FBF7B00EDF944 /* HYBezierCurve.m */; };
+		5A90F758214FBF7B00EDF944 /* HYJumpTextLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A90F755214FBF7B00EDF944 /* HYJumpTextLayer.m */; };
+		5AA579E2214FCFF000FB67BF /* UITextView+HYPlaceholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AA579E1214FCFEF00FB67BF /* UITextView+HYPlaceholder.m */; };
+		5AD3674A21548A8500B0588A /* HYLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3674421548A8500B0588A /* HYLocationManager.m */; };
+		5AD36751215496C200B0588A /* HYCoordinateTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD36750215496C200B0588A /* HYCoordinateTransform.m */; };
+		5AD367FE2154C3C400B0588A /* HYNumberButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD367D62154C3C400B0588A /* HYNumberButton.m */; };
+		5AD367FF2154C3C400B0588A /* HYProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD367D72154C3C400B0588A /* HYProgressHUD.m */; };
+		5AD368002154C3C400B0588A /* HYTabbarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD367D82154C3C400B0588A /* HYTabbarView.m */; };
+		5AD368012154C3C400B0588A /* HYTabbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD367D92154C3C400B0588A /* HYTabbarItem.m */; };
+		5AD368022154C3C400B0588A /* HYBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD367DA2154C3C400B0588A /* HYBaseTabBarController.m */; };
+		5AD368032154C3C400B0588A /* HYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD367DC2154C3C400B0588A /* HYBaseViewController.m */; };
+		5AD368042154C3C400B0588A /* HYBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD367DD2154C3C400B0588A /* HYBaseNavigationController.m */; };
+		5AD368052154C3C400B0588A /* HYBaseTopBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD367E12154C3C400B0588A /* HYBaseTopBar.m */; };
+		5AD368062154C3C400B0588A /* HYBaseUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5AD367E52154C3C400B0588A /* HYBaseUI.bundle */; };
+		5AD3680B2154C5BA00B0588A /* HYBaseUITool.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3680A2154C5BA00B0588A /* HYBaseUITool.m */; };
+		5AD3680E2154C86E00B0588A /* HYBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3680C2154C86E00B0588A /* HYBlurView.m */; };
+		5AD368362154D01000B0588A /* HYPhotoKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD368122154D01000B0588A /* HYPhotoKit.m */; };
+		5AD368612154D50800B0588A /* HYEditImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD368532154D50700B0588A /* HYEditImageViewController.m */; };
+		5AD368622154D50800B0588A /* HYPhotoDisplayCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD368542154D50700B0588A /* HYPhotoDisplayCollectionCell.m */; };
+		5AD368632154D50800B0588A /* HYAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD368552154D50700B0588A /* HYAlbumViewController.m */; };
+		5AD368642154D50800B0588A /* HYPhotoDisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD368562154D50700B0588A /* HYPhotoDisplayViewController.m */; };
+		5AD368652154D50800B0588A /* HYAlbumCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD368572154D50700B0588A /* HYAlbumCollectionCell.m */; };
+		5AD368662154D50800B0588A /* HYNativeAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD368592154D50700B0588A /* HYNativeAlbumViewController.m */; };
+		5AD368672154D50800B0588A /* HYCameraPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3685F2154D50800B0588A /* HYCameraPickerController.m */; };
+		5AD3686B2154D6FD00B0588A /* HYPhotoAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3686A2154D6FD00B0588A /* HYPhotoAssets.m */; };
+		5AD368812154D71900B0588A /* WKImageGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD368722154D71900B0588A /* WKImageGridView.m */; };
+		5AD368822154D71900B0588A /* WKImageClipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD368732154D71900B0588A /* WKImageClipView.m */; };
+		5AD368852154D71900B0588A /* ClipImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD368762154D71900B0588A /* ClipImageViewController.m */; };
+		5AD3688C2154DCE300B0588A /* HYMoviePlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3688B2154DCE300B0588A /* HYMoviePlayViewController.m */; };
+		5AD3688F2154DE2500B0588A /* AVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD3688D2154DE2500B0588A /* AVPlayerView.m */; };
+		5AF7B27621513AEA0049201E /* HYLoadMoreTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B26621513AEA0049201E /* HYLoadMoreTableView.m */; };
+		5AF7B27721513AEA0049201E /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B26B21513AEA0049201E /* EGORefreshTableHeaderView.m */; };
+		5AF7B27A21513AEA0049201E /* EGORefreshTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B27221513AEA0049201E /* EGORefreshTableFooterView.m */; };
+		5AF7B27B21513AEA0049201E /* RefreshCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B27321513AEA0049201E /* RefreshCircleView.m */; };
+		5AF7B27C21513AEA0049201E /* HYRefreshCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B27421513AEA0049201E /* HYRefreshCollectionView.m */; };
+		5AF7B27D21513AEA0049201E /* HYRefreshTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B27521513AEA0049201E /* HYRefreshTableView.m */; };
+		5AF7B28721539EB20049201E /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF7B28621539EB20049201E /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +91,6 @@
 		5A90F6AB214BB15000EDF944 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5A90F6AD214BB15000EDF944 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5A90F6AE214BB15000EDF944 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5A90F6B1214BB15000EDF944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A90F6B3214BB15100EDF944 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A90F6B6214BB15100EDF944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A90F6B8214BB15100EDF944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +101,112 @@
 		5A90F6CA214BB15200EDF944 /* HYToolFactoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HYToolFactoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A90F6CE214BB15200EDF944 /* HYToolFactoryUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYToolFactoryUITests.m; sourceTree = "<group>"; };
 		5A90F6D0214BB15200EDF944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A90F6FB214BB23100EDF944 /* UIColor+HYAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HYAddition.h"; sourceTree = "<group>"; };
+		5A90F6FD214BB23100EDF944 /* NSTimer+HYAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+HYAddition.h"; sourceTree = "<group>"; };
+		5A90F6FF214BB23100EDF944 /* UIImage+HYAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HYAddition.m"; sourceTree = "<group>"; };
+		5A90F702214BB23100EDF944 /* NSString+HYAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HYAddition.h"; sourceTree = "<group>"; };
+		5A90F704214BB23100EDF944 /* NSTimer+HYAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+HYAddition.m"; sourceTree = "<group>"; };
+		5A90F706214BB23100EDF944 /* UIColor+HYAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HYAddition.m"; sourceTree = "<group>"; };
+		5A90F709214BB23100EDF944 /* UIImage+HYAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HYAddition.h"; sourceTree = "<group>"; };
+		5A90F70A214BB23100EDF944 /* NSString+HYAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HYAddition.m"; sourceTree = "<group>"; };
+		5A90F714214BB24800EDF944 /* HYDateTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYDateTool.h; sourceTree = "<group>"; };
+		5A90F715214BB24800EDF944 /* HYFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYFileTool.m; sourceTree = "<group>"; };
+		5A90F716214BB24800EDF944 /* HYAnimationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAnimationTool.h; sourceTree = "<group>"; };
+		5A90F71A214BB24800EDF944 /* HYAnimationOrigamiTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAnimationOrigamiTool.h; sourceTree = "<group>"; };
+		5A90F71E214BB24800EDF944 /* HYFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYFileTool.h; sourceTree = "<group>"; };
+		5A90F71F214BB24800EDF944 /* HYAnimationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAnimationTool.m; sourceTree = "<group>"; };
+		5A90F720214BB24800EDF944 /* HYDateTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYDateTool.m; sourceTree = "<group>"; };
+		5A90F721214BB24800EDF944 /* HYAnimationOrigamiTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAnimationOrigamiTool.m; sourceTree = "<group>"; };
+		5A90F731214BB65500EDF944 /* HYLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLabel.h; sourceTree = "<group>"; };
+		5A90F732214BB65500EDF944 /* HYLinkLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLinkLabel.m; sourceTree = "<group>"; };
+		5A90F733214BB65500EDF944 /* HYLinkLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLinkLabel.h; sourceTree = "<group>"; };
+		5A90F734214BB65500EDF944 /* HYLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLabel.m; sourceTree = "<group>"; };
+		5A90F737214BC41C00EDF944 /* HYCommonTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYCommonTool.h; sourceTree = "<group>"; };
+		5A90F738214BC41C00EDF944 /* HYCommonTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYCommonTool.m; sourceTree = "<group>"; };
+		5A90F73A214BC4C600EDF944 /* HYCountDownTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYCountDownTool.h; sourceTree = "<group>"; };
+		5A90F73B214BC4C600EDF944 /* HYCountDownTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYCountDownTool.m; sourceTree = "<group>"; };
+		5A90F744214FAE7200EDF944 /* HYMediaTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYMediaTool.h; sourceTree = "<group>"; };
+		5A90F745214FAE7200EDF944 /* HYMediaTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYMediaTool.m; sourceTree = "<group>"; };
+		5A90F747214FBA6000EDF944 /* HYToolKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYToolKit.h; sourceTree = "<group>"; };
+		5A90F74D214FBEA100EDF944 /* HYCrashReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYCrashReport.h; sourceTree = "<group>"; };
+		5A90F74E214FBEA100EDF944 /* HYCrashReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYCrashReport.m; sourceTree = "<group>"; };
+		5A90F750214FBEDD00EDF944 /* HYSystemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYSystemView.h; sourceTree = "<group>"; };
+		5A90F751214FBEDD00EDF944 /* HYSystemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYSystemView.m; sourceTree = "<group>"; };
+		5A90F753214FBF7B00EDF944 /* HYJumpTextLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYJumpTextLayer.h; sourceTree = "<group>"; };
+		5A90F754214FBF7B00EDF944 /* HYBezierCurve.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBezierCurve.m; sourceTree = "<group>"; };
+		5A90F755214FBF7B00EDF944 /* HYJumpTextLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYJumpTextLayer.m; sourceTree = "<group>"; };
+		5A90F756214FBF7B00EDF944 /* HYBezierCurve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBezierCurve.h; sourceTree = "<group>"; };
+		5AA579E0214FCFEF00FB67BF /* UITextView+HYPlaceholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+HYPlaceholder.h"; sourceTree = "<group>"; };
+		5AA579E1214FCFEF00FB67BF /* UITextView+HYPlaceholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+HYPlaceholder.m"; sourceTree = "<group>"; };
+		5AD3674121548A8500B0588A /* HYLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLocationManager.h; sourceTree = "<group>"; };
+		5AD3674421548A8500B0588A /* HYLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLocationManager.m; sourceTree = "<group>"; };
+		5AD3674F215496C200B0588A /* HYCoordinateTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYCoordinateTransform.h; sourceTree = "<group>"; };
+		5AD36750215496C200B0588A /* HYCoordinateTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYCoordinateTransform.m; sourceTree = "<group>"; };
+		5AD367AC2154C34E00B0588A /* HYBaseUIHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYBaseUIHeader.h; sourceTree = "<group>"; };
+		5AD367D52154C3C400B0588A /* HYBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBaseNavigationController.h; sourceTree = "<group>"; };
+		5AD367D62154C3C400B0588A /* HYNumberButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYNumberButton.m; sourceTree = "<group>"; };
+		5AD367D72154C3C400B0588A /* HYProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYProgressHUD.m; sourceTree = "<group>"; };
+		5AD367D82154C3C400B0588A /* HYTabbarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTabbarView.m; sourceTree = "<group>"; };
+		5AD367D92154C3C400B0588A /* HYTabbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYTabbarItem.m; sourceTree = "<group>"; };
+		5AD367DA2154C3C400B0588A /* HYBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBaseTabBarController.m; sourceTree = "<group>"; };
+		5AD367DB2154C3C400B0588A /* HYBaseTopBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBaseTopBar.h; sourceTree = "<group>"; };
+		5AD367DC2154C3C400B0588A /* HYBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBaseViewController.m; sourceTree = "<group>"; };
+		5AD367DD2154C3C400B0588A /* HYBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBaseNavigationController.m; sourceTree = "<group>"; };
+		5AD367DE2154C3C400B0588A /* HYProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYProgressHUD.h; sourceTree = "<group>"; };
+		5AD367DF2154C3C400B0588A /* HYNumberButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYNumberButton.h; sourceTree = "<group>"; };
+		5AD367E02154C3C400B0588A /* HYTabbarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTabbarView.h; sourceTree = "<group>"; };
+		5AD367E12154C3C400B0588A /* HYBaseTopBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBaseTopBar.m; sourceTree = "<group>"; };
+		5AD367E22154C3C400B0588A /* HYBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBaseViewController.h; sourceTree = "<group>"; };
+		5AD367E32154C3C400B0588A /* HYBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBaseTabBarController.h; sourceTree = "<group>"; };
+		5AD367E42154C3C400B0588A /* HYTabbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYTabbarItem.h; sourceTree = "<group>"; };
+		5AD367E52154C3C400B0588A /* HYBaseUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HYBaseUI.bundle; sourceTree = "<group>"; };
+		5AD368092154C5BA00B0588A /* HYBaseUITool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HYBaseUITool.h; sourceTree = "<group>"; };
+		5AD3680A2154C5BA00B0588A /* HYBaseUITool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HYBaseUITool.m; sourceTree = "<group>"; };
+		5AD3680C2154C86E00B0588A /* HYBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBlurView.m; sourceTree = "<group>"; };
+		5AD3680D2154C86E00B0588A /* HYBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBlurView.h; sourceTree = "<group>"; };
+		5AD368122154D01000B0588A /* HYPhotoKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPhotoKit.m; sourceTree = "<group>"; };
+		5AD3682C2154D01000B0588A /* HYPhotoKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPhotoKit.h; sourceTree = "<group>"; };
+		5AD3684F2154D50700B0588A /* HYAlbumCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAlbumCollectionCell.h; sourceTree = "<group>"; };
+		5AD368502154D50700B0588A /* HYPhotoDisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPhotoDisplayViewController.h; sourceTree = "<group>"; };
+		5AD368522154D50700B0588A /* HYNativeAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYNativeAlbumViewController.h; sourceTree = "<group>"; };
+		5AD368532154D50700B0588A /* HYEditImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYEditImageViewController.m; sourceTree = "<group>"; };
+		5AD368542154D50700B0588A /* HYPhotoDisplayCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPhotoDisplayCollectionCell.m; sourceTree = "<group>"; };
+		5AD368552154D50700B0588A /* HYAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAlbumViewController.m; sourceTree = "<group>"; };
+		5AD368562154D50700B0588A /* HYPhotoDisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPhotoDisplayViewController.m; sourceTree = "<group>"; };
+		5AD368572154D50700B0588A /* HYAlbumCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYAlbumCollectionCell.m; sourceTree = "<group>"; };
+		5AD368582154D50700B0588A /* HYEditImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYEditImageViewController.h; sourceTree = "<group>"; };
+		5AD368592154D50700B0588A /* HYNativeAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYNativeAlbumViewController.m; sourceTree = "<group>"; };
+		5AD3685B2154D50700B0588A /* HYAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYAlbumViewController.h; sourceTree = "<group>"; };
+		5AD3685C2154D50700B0588A /* HYPhotoDisplayCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPhotoDisplayCollectionCell.h; sourceTree = "<group>"; };
+		5AD3685E2154D50800B0588A /* HYCameraPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYCameraPickerController.h; sourceTree = "<group>"; };
+		5AD3685F2154D50800B0588A /* HYCameraPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYCameraPickerController.m; sourceTree = "<group>"; };
+		5AD368692154D6FD00B0588A /* HYPhotoAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYPhotoAssets.h; sourceTree = "<group>"; };
+		5AD3686A2154D6FD00B0588A /* HYPhotoAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYPhotoAssets.m; sourceTree = "<group>"; };
+		5AD368702154D71900B0588A /* ClipImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClipImageViewController.h; sourceTree = "<group>"; };
+		5AD368722154D71900B0588A /* WKImageGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKImageGridView.m; sourceTree = "<group>"; };
+		5AD368732154D71900B0588A /* WKImageClipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKImageClipView.m; sourceTree = "<group>"; };
+		5AD368762154D71900B0588A /* ClipImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClipImageViewController.m; sourceTree = "<group>"; };
+		5AD368782154D71900B0588A /* WKImageClipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKImageClipView.h; sourceTree = "<group>"; };
+		5AD368792154D71900B0588A /* WKImageGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKImageGridView.h; sourceTree = "<group>"; };
+		5AD3688A2154DCE300B0588A /* HYMoviePlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYMoviePlayViewController.h; sourceTree = "<group>"; };
+		5AD3688B2154DCE300B0588A /* HYMoviePlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYMoviePlayViewController.m; sourceTree = "<group>"; };
+		5AD3688D2154DE2500B0588A /* AVPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerView.m; sourceTree = "<group>"; };
+		5AD3688E2154DE2500B0588A /* AVPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerView.h; sourceTree = "<group>"; };
+		5AF7B26621513AEA0049201E /* HYLoadMoreTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYLoadMoreTableView.m; sourceTree = "<group>"; };
+		5AF7B26721513AEA0049201E /* HYRefreshCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYRefreshCollectionView.h; sourceTree = "<group>"; };
+		5AF7B26821513AEA0049201E /* HYRefreshTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYRefreshTableView.h; sourceTree = "<group>"; };
+		5AF7B26921513AEA0049201E /* HYLoadMoreTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYLoadMoreTableView.h; sourceTree = "<group>"; };
+		5AF7B26B21513AEA0049201E /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		5AF7B26C21513AEA0049201E /* EGORefreshTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableFooterView.h; sourceTree = "<group>"; };
+		5AF7B26E21513AEA0049201E /* RefreshCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefreshCircleView.h; sourceTree = "<group>"; };
+		5AF7B27021513AEA0049201E /* EGOViewCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOViewCommon.h; sourceTree = "<group>"; };
+		5AF7B27121513AEA0049201E /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		5AF7B27221513AEA0049201E /* EGORefreshTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableFooterView.m; sourceTree = "<group>"; };
+		5AF7B27321513AEA0049201E /* RefreshCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RefreshCircleView.m; sourceTree = "<group>"; };
+		5AF7B27421513AEA0049201E /* HYRefreshCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYRefreshCollectionView.m; sourceTree = "<group>"; };
+		5AF7B27521513AEA0049201E /* HYRefreshTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYRefreshTableView.m; sourceTree = "<group>"; };
+		5AF7B28521539EB20049201E /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		5AF7B28621539EB20049201E /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +237,10 @@
 		5A90F69E214BB14F00EDF944 = {
 			isa = PBXGroup;
 			children = (
+				5AD367932154C03E00B0588A /* HYBaseUIKit */,
+				5AD3673F21548A4500B0588A /* HYLocationKit */,
+				5AF7B26521513AEA0049201E /* HYRefreshKit */,
+				5A90F6DC214BB19800EDF944 /* HYCommonTool */,
 				5A90F6A9214BB15000EDF944 /* HYToolFactory */,
 				5A90F6C2214BB15100EDF944 /* HYToolFactoryTests */,
 				5A90F6CD214BB15200EDF944 /* HYToolFactoryUITests */,
@@ -105,11 +265,12 @@
 				5A90F6AB214BB15000EDF944 /* AppDelegate.m */,
 				5A90F6AD214BB15000EDF944 /* ViewController.h */,
 				5A90F6AE214BB15000EDF944 /* ViewController.m */,
-				5A90F6B0214BB15000EDF944 /* Main.storyboard */,
 				5A90F6B3214BB15100EDF944 /* Assets.xcassets */,
 				5A90F6B5214BB15100EDF944 /* LaunchScreen.storyboard */,
 				5A90F6B8214BB15100EDF944 /* Info.plist */,
 				5A90F6B9214BB15100EDF944 /* main.m */,
+				5AF7B28521539EB20049201E /* TestViewController.h */,
+				5AF7B28621539EB20049201E /* TestViewController.m */,
 			);
 			path = HYToolFactory;
 			sourceTree = "<group>";
@@ -130,6 +291,226 @@
 				5A90F6D0214BB15200EDF944 /* Info.plist */,
 			);
 			path = HYToolFactoryUITests;
+			sourceTree = "<group>";
+		};
+		5A90F6DC214BB19800EDF944 /* HYCommonTool */ = {
+			isa = PBXGroup;
+			children = (
+				5A90F747214FBA6000EDF944 /* HYToolKit.h */,
+				5A90F74C214FBEA100EDF944 /* Extra */,
+				5A90F730214BB65500EDF944 /* UI */,
+				5A90F713214BB24800EDF944 /* Common */,
+				5A90F6FA214BB23100EDF944 /* Addition */,
+			);
+			path = HYCommonTool;
+			sourceTree = "<group>";
+		};
+		5A90F6FA214BB23100EDF944 /* Addition */ = {
+			isa = PBXGroup;
+			children = (
+				5A90F702214BB23100EDF944 /* NSString+HYAddition.h */,
+				5A90F70A214BB23100EDF944 /* NSString+HYAddition.m */,
+				5A90F6FD214BB23100EDF944 /* NSTimer+HYAddition.h */,
+				5A90F704214BB23100EDF944 /* NSTimer+HYAddition.m */,
+				5A90F6FB214BB23100EDF944 /* UIColor+HYAddition.h */,
+				5A90F706214BB23100EDF944 /* UIColor+HYAddition.m */,
+				5A90F709214BB23100EDF944 /* UIImage+HYAddition.h */,
+				5A90F6FF214BB23100EDF944 /* UIImage+HYAddition.m */,
+			);
+			path = Addition;
+			sourceTree = "<group>";
+		};
+		5A90F713214BB24800EDF944 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5A90F71A214BB24800EDF944 /* HYAnimationOrigamiTool.h */,
+				5A90F721214BB24800EDF944 /* HYAnimationOrigamiTool.m */,
+				5A90F716214BB24800EDF944 /* HYAnimationTool.h */,
+				5A90F71F214BB24800EDF944 /* HYAnimationTool.m */,
+				5A90F737214BC41C00EDF944 /* HYCommonTool.h */,
+				5A90F738214BC41C00EDF944 /* HYCommonTool.m */,
+				5A90F73A214BC4C600EDF944 /* HYCountDownTool.h */,
+				5A90F73B214BC4C600EDF944 /* HYCountDownTool.m */,
+				5A90F714214BB24800EDF944 /* HYDateTool.h */,
+				5A90F720214BB24800EDF944 /* HYDateTool.m */,
+				5A90F71E214BB24800EDF944 /* HYFileTool.h */,
+				5A90F715214BB24800EDF944 /* HYFileTool.m */,
+				5A90F744214FAE7200EDF944 /* HYMediaTool.h */,
+				5A90F745214FAE7200EDF944 /* HYMediaTool.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5A90F730214BB65500EDF944 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5A90F731214BB65500EDF944 /* HYLabel.h */,
+				5A90F734214BB65500EDF944 /* HYLabel.m */,
+				5A90F733214BB65500EDF944 /* HYLinkLabel.h */,
+				5A90F732214BB65500EDF944 /* HYLinkLabel.m */,
+				5A90F750214FBEDD00EDF944 /* HYSystemView.h */,
+				5A90F751214FBEDD00EDF944 /* HYSystemView.m */,
+				5A90F756214FBF7B00EDF944 /* HYBezierCurve.h */,
+				5A90F754214FBF7B00EDF944 /* HYBezierCurve.m */,
+				5A90F753214FBF7B00EDF944 /* HYJumpTextLayer.h */,
+				5A90F755214FBF7B00EDF944 /* HYJumpTextLayer.m */,
+				5AA579E0214FCFEF00FB67BF /* UITextView+HYPlaceholder.h */,
+				5AA579E1214FCFEF00FB67BF /* UITextView+HYPlaceholder.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5A90F74C214FBEA100EDF944 /* Extra */ = {
+			isa = PBXGroup;
+			children = (
+				5A90F74D214FBEA100EDF944 /* HYCrashReport.h */,
+				5A90F74E214FBEA100EDF944 /* HYCrashReport.m */,
+			);
+			path = Extra;
+			sourceTree = "<group>";
+		};
+		5AD3673F21548A4500B0588A /* HYLocationKit */ = {
+			isa = PBXGroup;
+			children = (
+				5AD3674F215496C200B0588A /* HYCoordinateTransform.h */,
+				5AD36750215496C200B0588A /* HYCoordinateTransform.m */,
+				5AD3674121548A8500B0588A /* HYLocationManager.h */,
+				5AD3674421548A8500B0588A /* HYLocationManager.m */,
+			);
+			path = HYLocationKit;
+			sourceTree = "<group>";
+		};
+		5AD367932154C03E00B0588A /* HYBaseUIKit */ = {
+			isa = PBXGroup;
+			children = (
+				5AD367AC2154C34E00B0588A /* HYBaseUIHeader.h */,
+				5AD3680F2154D01000B0588A /* HYPhotoUI */,
+				5AD367D42154C3C400B0588A /* HYBaseUI */,
+				5AD367E52154C3C400B0588A /* HYBaseUI.bundle */,
+			);
+			path = HYBaseUIKit;
+			sourceTree = "<group>";
+		};
+		5AD367D42154C3C400B0588A /* HYBaseUI */ = {
+			isa = PBXGroup;
+			children = (
+				5AD367D52154C3C400B0588A /* HYBaseNavigationController.h */,
+				5AD367DD2154C3C400B0588A /* HYBaseNavigationController.m */,
+				5AD367E32154C3C400B0588A /* HYBaseTabBarController.h */,
+				5AD367DA2154C3C400B0588A /* HYBaseTabBarController.m */,
+				5AD367DB2154C3C400B0588A /* HYBaseTopBar.h */,
+				5AD367E12154C3C400B0588A /* HYBaseTopBar.m */,
+				5AD368092154C5BA00B0588A /* HYBaseUITool.h */,
+				5AD3680A2154C5BA00B0588A /* HYBaseUITool.m */,
+				5AD367E22154C3C400B0588A /* HYBaseViewController.h */,
+				5AD367DC2154C3C400B0588A /* HYBaseViewController.m */,
+				5AD3680D2154C86E00B0588A /* HYBlurView.h */,
+				5AD3680C2154C86E00B0588A /* HYBlurView.m */,
+				5AD367DF2154C3C400B0588A /* HYNumberButton.h */,
+				5AD367D62154C3C400B0588A /* HYNumberButton.m */,
+				5AD367DE2154C3C400B0588A /* HYProgressHUD.h */,
+				5AD367D72154C3C400B0588A /* HYProgressHUD.m */,
+				5AD367E42154C3C400B0588A /* HYTabbarItem.h */,
+				5AD367D92154C3C400B0588A /* HYTabbarItem.m */,
+				5AD367E02154C3C400B0588A /* HYTabbarView.h */,
+				5AD367D82154C3C400B0588A /* HYTabbarView.m */,
+			);
+			path = HYBaseUI;
+			sourceTree = "<group>";
+		};
+		5AD3680F2154D01000B0588A /* HYPhotoUI */ = {
+			isa = PBXGroup;
+			children = (
+				5AD3684E2154D50700B0588A /* HYAlbum */,
+				5AD3685D2154D50800B0588A /* HYCamera */,
+				5AD3686C2154D71900B0588A /* HYImageClip */,
+				5AD3682C2154D01000B0588A /* HYPhotoKit.h */,
+				5AD368122154D01000B0588A /* HYPhotoKit.m */,
+				5AD368682154D6FD00B0588A /* Model */,
+			);
+			path = HYPhotoUI;
+			sourceTree = "<group>";
+		};
+		5AD3684E2154D50700B0588A /* HYAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				5AD3684F2154D50700B0588A /* HYAlbumCollectionCell.h */,
+				5AD368572154D50700B0588A /* HYAlbumCollectionCell.m */,
+				5AD3685B2154D50700B0588A /* HYAlbumViewController.h */,
+				5AD368552154D50700B0588A /* HYAlbumViewController.m */,
+				5AD368582154D50700B0588A /* HYEditImageViewController.h */,
+				5AD368532154D50700B0588A /* HYEditImageViewController.m */,
+				5AD368522154D50700B0588A /* HYNativeAlbumViewController.h */,
+				5AD368592154D50700B0588A /* HYNativeAlbumViewController.m */,
+				5AD3685C2154D50700B0588A /* HYPhotoDisplayCollectionCell.h */,
+				5AD368542154D50700B0588A /* HYPhotoDisplayCollectionCell.m */,
+				5AD368502154D50700B0588A /* HYPhotoDisplayViewController.h */,
+				5AD368562154D50700B0588A /* HYPhotoDisplayViewController.m */,
+			);
+			path = HYAlbum;
+			sourceTree = "<group>";
+		};
+		5AD3685D2154D50800B0588A /* HYCamera */ = {
+			isa = PBXGroup;
+			children = (
+				5AD3685E2154D50800B0588A /* HYCameraPickerController.h */,
+				5AD3685F2154D50800B0588A /* HYCameraPickerController.m */,
+				5AD3688A2154DCE300B0588A /* HYMoviePlayViewController.h */,
+				5AD3688B2154DCE300B0588A /* HYMoviePlayViewController.m */,
+				5AD3688E2154DE2500B0588A /* AVPlayerView.h */,
+				5AD3688D2154DE2500B0588A /* AVPlayerView.m */,
+			);
+			path = HYCamera;
+			sourceTree = "<group>";
+		};
+		5AD368682154D6FD00B0588A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5AD368692154D6FD00B0588A /* HYPhotoAssets.h */,
+				5AD3686A2154D6FD00B0588A /* HYPhotoAssets.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5AD3686C2154D71900B0588A /* HYImageClip */ = {
+			isa = PBXGroup;
+			children = (
+				5AD368702154D71900B0588A /* ClipImageViewController.h */,
+				5AD368762154D71900B0588A /* ClipImageViewController.m */,
+				5AD368782154D71900B0588A /* WKImageClipView.h */,
+				5AD368732154D71900B0588A /* WKImageClipView.m */,
+				5AD368792154D71900B0588A /* WKImageGridView.h */,
+				5AD368722154D71900B0588A /* WKImageGridView.m */,
+			);
+			path = HYImageClip;
+			sourceTree = "<group>";
+		};
+		5AF7B26521513AEA0049201E /* HYRefreshKit */ = {
+			isa = PBXGroup;
+			children = (
+				5AF7B26A21513AEA0049201E /* EGORefresh */,
+				5AF7B26921513AEA0049201E /* HYLoadMoreTableView.h */,
+				5AF7B26621513AEA0049201E /* HYLoadMoreTableView.m */,
+				5AF7B26721513AEA0049201E /* HYRefreshCollectionView.h */,
+				5AF7B27421513AEA0049201E /* HYRefreshCollectionView.m */,
+				5AF7B26821513AEA0049201E /* HYRefreshTableView.h */,
+				5AF7B27521513AEA0049201E /* HYRefreshTableView.m */,
+			);
+			path = HYRefreshKit;
+			sourceTree = "<group>";
+		};
+		5AF7B26A21513AEA0049201E /* EGORefresh */ = {
+			isa = PBXGroup;
+			children = (
+				5AF7B26C21513AEA0049201E /* EGORefreshTableFooterView.h */,
+				5AF7B27221513AEA0049201E /* EGORefreshTableFooterView.m */,
+				5AF7B27121513AEA0049201E /* EGORefreshTableHeaderView.h */,
+				5AF7B26B21513AEA0049201E /* EGORefreshTableHeaderView.m */,
+				5AF7B27021513AEA0049201E /* EGOViewCommon.h */,
+				5AF7B26E21513AEA0049201E /* RefreshCircleView.h */,
+				5AF7B27321513AEA0049201E /* RefreshCircleView.m */,
+			);
+			path = EGORefresh;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,9 +616,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AD368062154C3C400B0588A /* HYBaseUI.bundle in Resources */,
 				5A90F6B7214BB15100EDF944 /* LaunchScreen.storyboard in Resources */,
 				5A90F6B4214BB15100EDF944 /* Assets.xcassets in Resources */,
-				5A90F6B2214BB15000EDF944 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +643,59 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A90F758214FBF7B00EDF944 /* HYJumpTextLayer.m in Sources */,
+				5AD368652154D50800B0588A /* HYAlbumCollectionCell.m in Sources */,
+				5AD3680E2154C86E00B0588A /* HYBlurView.m in Sources */,
+				5AA579E2214FCFF000FB67BF /* UITextView+HYPlaceholder.m in Sources */,
+				5AD3688F2154DE2500B0588A /* AVPlayerView.m in Sources */,
+				5AF7B28721539EB20049201E /* TestViewController.m in Sources */,
+				5AF7B27A21513AEA0049201E /* EGORefreshTableFooterView.m in Sources */,
+				5A90F727214BB24800EDF944 /* HYFileTool.m in Sources */,
+				5AF7B27C21513AEA0049201E /* HYRefreshCollectionView.m in Sources */,
+				5AD3680B2154C5BA00B0588A /* HYBaseUITool.m in Sources */,
+				5A90F739214BC41D00EDF944 /* HYCommonTool.m in Sources */,
+				5A90F70D214BB23100EDF944 /* NSTimer+HYAddition.m in Sources */,
+				5A90F72A214BB24800EDF944 /* HYAnimationTool.m in Sources */,
+				5AD367FE2154C3C400B0588A /* HYNumberButton.m in Sources */,
+				5AD368662154D50800B0588A /* HYNativeAlbumViewController.m in Sources */,
+				5AD368812154D71900B0588A /* WKImageGridView.m in Sources */,
+				5AD368622154D50800B0588A /* HYPhotoDisplayCollectionCell.m in Sources */,
+				5AD368672154D50800B0588A /* HYCameraPickerController.m in Sources */,
+				5AF7B27621513AEA0049201E /* HYLoadMoreTableView.m in Sources */,
+				5A90F70C214BB23100EDF944 /* UIImage+HYAddition.m in Sources */,
+				5A90F712214BB23100EDF944 /* NSString+HYAddition.m in Sources */,
+				5AD368042154C3C400B0588A /* HYBaseNavigationController.m in Sources */,
+				5AD368032154C3C400B0588A /* HYBaseViewController.m in Sources */,
 				5A90F6AF214BB15000EDF944 /* ViewController.m in Sources */,
+				5AD368642154D50800B0588A /* HYPhotoDisplayViewController.m in Sources */,
+				5AD3686B2154D6FD00B0588A /* HYPhotoAssets.m in Sources */,
+				5AD368052154C3C400B0588A /* HYBaseTopBar.m in Sources */,
+				5AD368852154D71900B0588A /* ClipImageViewController.m in Sources */,
+				5AF7B27D21513AEA0049201E /* HYRefreshTableView.m in Sources */,
+				5AD36751215496C200B0588A /* HYCoordinateTransform.m in Sources */,
+				5AD368002154C3C400B0588A /* HYTabbarView.m in Sources */,
+				5AD368022154C3C400B0588A /* HYBaseTabBarController.m in Sources */,
 				5A90F6BA214BB15100EDF944 /* main.m in Sources */,
+				5A90F735214BB65500EDF944 /* HYLinkLabel.m in Sources */,
+				5A90F72B214BB24800EDF944 /* HYDateTool.m in Sources */,
+				5A90F72C214BB24800EDF944 /* HYAnimationOrigamiTool.m in Sources */,
+				5AF7B27B21513AEA0049201E /* RefreshCircleView.m in Sources */,
+				5AD368632154D50800B0588A /* HYAlbumViewController.m in Sources */,
+				5A90F74F214FBEA200EDF944 /* HYCrashReport.m in Sources */,
+				5A90F70F214BB23100EDF944 /* UIColor+HYAddition.m in Sources */,
+				5A90F746214FAE7200EDF944 /* HYMediaTool.m in Sources */,
+				5A90F752214FBEDD00EDF944 /* HYSystemView.m in Sources */,
+				5AD368612154D50800B0588A /* HYEditImageViewController.m in Sources */,
+				5A90F73C214BC4C600EDF944 /* HYCountDownTool.m in Sources */,
+				5AD368362154D01000B0588A /* HYPhotoKit.m in Sources */,
+				5AD367FF2154C3C400B0588A /* HYProgressHUD.m in Sources */,
+				5A90F757214FBF7B00EDF944 /* HYBezierCurve.m in Sources */,
+				5AD368012154C3C400B0588A /* HYTabbarItem.m in Sources */,
+				5A90F736214BB65500EDF944 /* HYLabel.m in Sources */,
+				5AD368822154D71900B0588A /* WKImageClipView.m in Sources */,
+				5AF7B27721513AEA0049201E /* EGORefreshTableHeaderView.m in Sources */,
+				5AD3674A21548A8500B0588A /* HYLocationManager.m in Sources */,
+				5AD3688C2154DCE300B0588A /* HYMoviePlayViewController.m in Sources */,
 				5A90F6AC214BB15000EDF944 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,14 +732,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5A90F6B0214BB15000EDF944 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5A90F6B1214BB15000EDF944 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5A90F6B5214BB15100EDF944 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -433,15 +857,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 398J2ZYAQA;
 				INFOPLIST_FILE = HYToolFactory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ihooyah.www.HYToolFactory;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zpxw.lop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = KouDaiLianMengDev;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "-Wno-documentation";
 			};
 			name = Debug;
 		};
@@ -449,15 +876,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 398J2ZYAQA;
 				INFOPLIST_FILE = HYToolFactory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ihooyah.www.HYToolFactory;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zpxw.lop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = KouDaiLianMengDev;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				WARNING_CFLAGS = "-Wno-documentation";
 			};
 			name = Release;
 		};
